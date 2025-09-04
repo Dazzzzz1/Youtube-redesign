@@ -1,0 +1,97 @@
+@use  "_variables" as *;
+
+@mixin textBoldH{
+    color: $grey;
+    font-family: Mulish;
+    font-size: 26px;
+    font-weight: 700;
+}
+@mixin textBoldT{
+    color: $grey;
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+}
+@mixin textBold{
+    color: black;
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+}
+@mixin textCateg{
+    color: black;
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 400;
+}
+@mixin textMediaMenu{
+    color: $menuMedia;
+    font-family: Mulish;
+    font-size: 10px; 
+}
+@mixin textCategHover{
+    color: red;
+    font-family: Mulish;
+    font-size: 18px;
+    font-weight: 700;
+}
+@mixin textMain{
+    color: $dark_grey;
+    font-family: Mulish;
+    font-size: 16px;   
+}
+@mixin textMainSub{
+    color: white;
+    font-family: Mulish;
+    font-size: 16px;   
+}
+@mixin textMainBold{
+    color: $grey;
+    font-family: Mulish;
+    font-size: 16px; 
+    font-weight: 700;
+}
+@mixin textSubMain2{
+    color: $light_grey;
+    font-family: Mulish;
+    font-size: 16px;  
+}
+@mixin textDesc{
+    color: black;
+    font-family: Mulish;
+    font-size: 16px; 
+    opacity: 0.5;
+}
+@mixin textSubMain{
+   color: $light_grey;
+    font-family: Mulish;
+    font-size: 13px;  
+}
+@mixin textSmall{
+    color:white;
+    font-family: Mulish;
+    font-size: 12px; 
+    font-weight: 700;
+}
+@mixin alignCenter{
+    display:flex;
+    align-items: center;
+}
+@mixin flexCol{
+    display:flex;
+    flex-direction: column;
+}
+@mixin detailsBox{
+    display: flex; 
+    @include textSubMain; 
+    padding-top:4px;
+}
+@mixin clearButton{
+    border: none;
+    cursor: pointer;
+    background-color: transparent;
+}
+@mixin styleReset{
+    margin: 0;
+    padding: 0;
+}
