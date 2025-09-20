@@ -1,31 +1,31 @@
 @use  "_variables" as *;
 
 @mixin textBoldH{
-    color: $grey;
+    color: var(--grey);
     font-family: Mulish;
     font-size: 26px;
     font-weight: 700;
 }
 @mixin textBoldT{
-    color: $grey;
+    color: var(--grey);
     font-family: Mulish;
     font-size: 18px;
     font-weight: 700;
 }
 @mixin textBold{
-    color: black;
+    color: var(--icon);
     font-family: Mulish;
     font-size: 18px;
     font-weight: 700;
 }
 @mixin textCateg{
-    color: black;
+    color: var(--icon);;
     font-family: Mulish;
     font-size: 18px;
     font-weight: 400;
 }
 @mixin textMediaMenu{
-    color: $menuMedia;
+    color: var(--menuMedia);
     font-family: Mulish;
     font-size: 10px; 
 }
@@ -36,7 +36,7 @@
     font-weight: 700;
 }
 @mixin textMain{
-    color: $dark_grey;
+    color: var(--dark_grey);
     font-family: Mulish;
     font-size: 16px;   
 }
@@ -46,24 +46,24 @@
     font-size: 16px;   
 }
 @mixin textMainBold{
-    color: $grey;
+    color: var(--grey);
     font-family: Mulish;
     font-size: 16px; 
     font-weight: 700;
 }
 @mixin textSubMain2{
-    color: $light_grey;
+    color: var(--light_grey);
     font-family: Mulish;
     font-size: 16px;  
 }
 @mixin textDesc{
-    color: black;
+    color: var(--icon);
     font-family: Mulish;
     font-size: 16px; 
     opacity: 0.5;
 }
 @mixin textSubMain{
-   color: $light_grey;
+   color: var(--light_grey);
     font-family: Mulish;
     font-size: 13px;  
 }
