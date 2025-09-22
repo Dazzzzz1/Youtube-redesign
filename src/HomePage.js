@@ -54,7 +54,6 @@ function playVideo(elem) {
     const video = elem.querySelector('.player');
     const img = elem.querySelector('.vids_result_img');
     
-    
     img.style.opacity = '0';
     video.style.opacity = '1';
     video.play();
