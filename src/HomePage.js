@@ -48,3 +48,30 @@ initSlider('.channel_review > .channel_review_content', ' .channel_review_conten
 initSlider('.recommended_content_boxes', '.recommended_content_box', '#left2', '#right2');
 initSlider('.rec_channel > .channel_review_content', '.channel_review_content_box', '#left3', '#right3');
 
+const vid_boxes = document.querySelectorAll(".channel_review_content_box")
+const video_boxes = document.querySelectorAll('.recommended_content_box');
+
+
+video_boxes.forEach(box  => {
+   const video = box.querySelector('.recommended_content_video');
+
+    box.addEventListener('mouseenter', () => {
+        video.play()
+    });
+    box.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+
+vid_boxes.forEach(box  => {
+   const video = box.querySelector('.channel_review_content_video');
+
+    box.addEventListener('mouseenter', () => {
+        video.play()
+    });
+    box.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});

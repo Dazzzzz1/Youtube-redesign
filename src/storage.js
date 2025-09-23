@@ -7,7 +7,7 @@ export const videos = [
     time: "3 days ago",
     owner: "Dollie Blair",
     image: "https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
-    url: ""
+    url: "video.mp4"
   },
   {
     id: 2,
@@ -26,6 +26,7 @@ export const videos = [
     time: "4 months ago",
     owner: "Food & Drink",
     image: "https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80",
+    url: "video.mp4"
   },
   {
     id: 4,
