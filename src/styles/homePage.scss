@@ -385,6 +385,9 @@ main{
                         color: var(--menuMedia);
                         opacity: 0.6;
                     }
+                    .side_nav_btn_text{
+                        @include textMain;
+                    }
                 }
             } 
         }
@@ -408,8 +411,17 @@ main{
     }
 } 
 .side_nav_categ{
+    @include flexCol;
+    gap: 30px;
     @media(width < 1600px){
         display: none;
+    }
+    .side_nav_btn{
+        @include alignCenter;
+        gap: 14px;
+        .side_nav_btn_text{
+            @include textMain;
+        }
     }
 }
 .side_nav_btn, .side_nav_sett{
