@@ -12,23 +12,34 @@ a{
 }
 body{
     background-color: var(--bg);
+    padding-top: 65px;
 }
 header{
     display: flex;
     justify-content: space-between;
     padding: 20px 70px 30px 60px;
     gap: 10vw;
+    position: fixed;
+    width: 93vw;
+    background-color: var(--bg);
+    top: 0;
+    z-index: 1;
+    @media (width< 1500px){
+        width: 88vw;
+    }
+    @media (width< 745px){
+        width: 80vw;
+    }
     .header_start{
         display: flex;
         justify-content: space-between;
         .header_start_nav{
             display: flex;
+            gap: 28px;
             align-items: center;
             .header_start_burger{
-                display: none;
                 color: var(--icon);
                 @media (width < 1600px){
-                    display: flex;
                     margin: 0px 35px;
                 }
                 @media (width < 500px){
@@ -70,6 +81,7 @@ header{
             .header_search_input{
                 background-color: transparent;
                 border: none;
+                outline: none;
                 width: 100%;
                 height: 100%;
                 @include textMain;
@@ -105,7 +117,6 @@ header{
                 color: var(--icon);
             }
             .header_end_btns_notif{
-                
                 @include alignCenter;
                 color: var(--icon);
                 .header_end_btns_notif_count{
@@ -127,6 +138,8 @@ header{
         }
     }
 }
+
+
 main{
     display: flex;
     .side_nav{
@@ -134,18 +147,35 @@ main{
         margin-top: 30px;
         margin-left: 61px;
         gap: 60px;
-        width: 160px;
+        position: fixed;
+        background-color: var(--bg);
         @media (width < 1600px){
             gap: 15px;
         }
-        @media (width < 950px){
+        @media (width < 620px){
             display: none;
+        }
+        .side_nav_categ{
+            @include flexCol;
+            gap: 30px;
+            display: none;
+            // @media(width < 1600px){
+            //     display: none;
+            // }
+            .side_nav_btn{
+                @include alignCenter;
+                gap: 14px;
+                .side_nav_btn_text{
+                    @include textMain;
+                }
+            }
         }
         .side_nav_subs{
             @include flexCol;
-            @media(width < 1600px){
-                display: none;
-            }
+            display: none;
+            // @media(width < 1600px){
+            //     display: none;
+            // }
             .side_nav_subs_head{
                 @include textBold;
                 padding-bottom: 15px;
@@ -214,19 +244,22 @@ main{
         }
     }
     .feed{
-        margin-left: 90px;
+        margin-left: 200px;
+        margin-top: 45px;
         display: flex;
         flex-direction: column;
         gap: 50px;
         width: 90vw;
         overflow: hidden;
+         @media (width > 1599px){
+             margin-left: 250px;
+         }
         @media (width < 620px){
             align-items: center;
             width: 100%;
             margin-left: 0px;
         }
         .channel_review{
-        //    overflow: hidden; 
             display: flex;
             flex-direction: column;
             gap: 30px;
@@ -260,10 +293,6 @@ main{
             }
         }
         .recommended{
-            // width: 90vw;
-            // @media (width < 2300px){
-            //     width: 83.5vw;
-            // }
             @media (width < 620px){
                 display: none;
             }
@@ -397,12 +426,6 @@ main{
         }
     }
 }
-#side_nav_btn_img_home{
-    color: red;
-}
-#home{
-    color: red;
-}
 .side_nav_main, .side_nav_sett{
     @include flexCol;
     gap: 30px;
@@ -414,20 +437,7 @@ main{
         }
     }
 } 
-.side_nav_categ{
-    @include flexCol;
-    gap: 30px;
-    @media(width < 1600px){
-        display: none;
-    }
-    .side_nav_btn{
-        @include alignCenter;
-        gap: 14px;
-        .side_nav_btn_text{
-            @include textMain;
-        }
-    }
-}
+
 .side_nav_btn, .side_nav_sett{
     color: var(--icon);
     @media(width < 1600px){
@@ -451,7 +461,6 @@ main{
     display: flex;
     gap: 40px;
     max-width: 3000px;
-    // width: 90vw;
     transition: transform 0.3s ease;
     @media (width < 2300px){
         width: 99vw;
@@ -535,3 +544,113 @@ main{
 .result_notF{
     @include textMainBold();
 }
+
+    .side_nav_burger{
+        display: none;
+        flex-direction: column;
+        margin-top: 30px;
+        gap: 60px;
+        position: absolute;
+        background-color: var(--menuBurg);
+        // opacity: 1;
+        // overflow-y: scroll;
+        height: 100%;
+        @media (width < 1600px){
+            gap: 15px;
+        }
+        .side_nav_categ{
+            @include flexCol;
+            gap: 30px;
+           
+            .side_nav_btn{
+                @include alignCenter;
+                gap: 14px;
+                .side_nav_btn_text{
+                    @include textMain;
+                }
+            }
+        }
+        .side_nav_subs{
+            @include flexCol;
+            .side_nav_subs_head{
+                @include textBold;
+                padding-bottom: 15px;
+            }
+            .side_nav_subs_prof{
+                @include alignCenter;
+                gap: 10px;
+                min-width: 0;
+                padding: 12px 8px 12px 8px;
+                .side_nav_subs_prof_name{
+                    @include textMain;
+                    min-width: 0;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                }
+            }
+            .side_nav_subs_prof:hover{
+                background-color: var(--light_grey_bg);
+                border-radius: 5.5px;
+            }
+        }
+        .side_nav_sett_box{
+            display: flex;
+            flex-direction: column;
+            gap: 25px;
+            .theme_toggler_box{
+                @media(width < 1600px){
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                }
+                .theme_toggler{
+                    position: relative;
+                    width: 61px;
+                    height: 31px;
+                    background: rgba(216, 215, 215, 0.5);
+                    display: flex;
+                    align-items: center;
+                    border-radius: 20px;
+                    border: 2px solid red;
+                    .theme_icon{
+                        display: flex;
+                        margin-left: 5px;
+                        gap: 15px;
+                    }
+                }
+                .theme_toggler .fill {
+                    position: absolute;
+                    right: 3px;
+                    top: 2px;
+                    border-radius: 20px;
+                    border: 1px solid red;
+                    width: 25px;
+                    height: 25px;
+                    transition: 0.4s right;
+                    background-color: red;
+                }
+                .theme_toggler input {
+                    visibility: hidden;
+                }   
+                .theme_toggler input:checked + span.fill {
+                    right: calc(100% - 29px);
+                }
+            }         
+        }
+    }
+
+ .side_nav_burger.active{
+    display: flex;
+    justify-content: flex-start;
+    animation: 0.15s burgerAnimation linear forwards ;
+ }
+
+ @keyframes burgerAnimation{
+    from{
+        transform: translateX(0px);
+    }
+    to {
+        transform: translateX(60px);
+    }
+ }

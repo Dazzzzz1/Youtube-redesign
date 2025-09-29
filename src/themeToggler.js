@@ -10,7 +10,7 @@
     } 
 
     document.addEventListener('DOMContentLoaded', function() {
-        const themeToggler = document.querySelector('#toggler');
+        const themeToggler = document.querySelectorAll('.toggler');
         
         const enableDark = () => {
             document.body.classList.add('darkMode');
@@ -22,10 +22,12 @@
         }
         
         if (themeToggler) {
-            themeToggler.addEventListener('click', () => {
-                const currentTheme = localStorage.getItem('darkMode');
-                currentTheme !== 'active' ? enableDark() : disableDark();
-            });
+            themeToggler.forEach (toggler  => {
+                toggler.addEventListener('click', () => {
+                    const currentTheme = localStorage.getItem('darkMode');
+                    currentTheme !== 'active' ? enableDark() : disableDark();
+                });
+            })
         }
     });
 })();

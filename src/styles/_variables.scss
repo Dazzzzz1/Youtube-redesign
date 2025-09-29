@@ -8,6 +8,8 @@
     --menuMedia : rgba(137, 137, 137, 1);
     --bg : white;
     --icon : black;
+    --menuBurg: white;
+    --menuBurgBorder: rgb(28, 28, 28);
 }
 .darkMode{
     --grey : rgba(225, 225, 225, 1);
@@ -19,6 +21,8 @@
     --menuMedia : rgba(225, 225, 225, 1);
     --bg : rgb(28, 28, 28);
     --icon : rgb(255, 255, 255);
+    --menuBurg:  rgb(28, 28, 28);
+    --menuBurgBorder: rgb(255, 255, 255);
 }
 @media (prefers-color-scheme: dark){
     :root:not(.darkMode){
@@ -31,5 +35,7 @@
         --menuMedia : rgba(137, 137, 137, 1);
         --bg : white;
         --icon : black;
+        --menuBurg: white;
+        --menuBurgBorder: rgb(28, 28, 28);
     }
 }

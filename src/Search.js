@@ -1,4 +1,4 @@
-import {videos} from './storage.js';
+import {videos} from './storage.json';
 
 function playVideo(elem) {
     const video = elem.querySelector('.player');
@@ -88,7 +88,8 @@ function showResults(results) {
 }
 
 const searchBtn = document.querySelector('.header_search_btn');
-const searchInput = document.querySelector('.header_search_input')
+const searchInput = document.querySelector('.header_search_input');
+const search = document.querySelector('.header_search');
 
 searchBtn.addEventListener('click', () => {
     const searchText = searchInput.value;
@@ -104,8 +105,11 @@ searchInput.addEventListener('keypress', (e) => {
         e.preventDefault();
        const searchText = e.target.value;
         if (searchText.trim().length > 1){
+            search.style.border = 'none';
             const results = searchVideos(searchText);
             showResults(results);
+        } else{
+            search.style.border = '2px solid red';
         }
     }
 })
