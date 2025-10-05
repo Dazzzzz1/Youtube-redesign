@@ -1,5 +1,70 @@
 @use  "_variables" as *;
 
+@mixin menu-media{
+  display:none;
+  @media (width < 500px){
+    display: flex;
+    position: fixed;
+    bottom: 0;
+    background-color: var(--bg);
+    justify-content: center;
+    align-items: center;
+    gap: 12vw;
+    width: 100%;
+    height: 61px;
+    border-top: 1px solid var(--border);
+    .menu-media__btn{
+      @include textMediaMenu;
+      @include flexCol;
+      align-items: center;
+      gap: 5px;
+      .sidebar__btn__img{
+        color: var(--menuMedia);
+        opacity: 0.6;
+      }
+    }
+  }
+}
+@mixin channel-wrapper{
+  display: flex;
+  gap: 40px;
+  max-width: 3000px;
+  transition: transform 0.3s ease;
+  @media (width < 2300px){
+    width: 99vw;
+  }
+  @media (width < 620px){
+    flex-direction: column;
+    width: clamp(320px, 30vw, 3000px);
+    gap: 90px;
+  }
+  .video-card__wrapper{
+    width: 250px;
+    @media (width < 620px){
+      width: 100%;
+      height: 170px;
+    }
+    .video{
+      height: 150px;
+      width: 250px;
+      border-radius: 25px;
+      object-fit: cover;
+      border: 2px solid var(--border);
+      @media (width < 620px){
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .video-card__name{
+      @include textMainBold;
+      padding-top:10px;
+    }
+    .video-card__details{
+      @include detailsBox;
+      justify-content: space-between;
+    }
+  }
+}
 @mixin textBoldH{
     color: var(--grey);
     font-family: Mulish;

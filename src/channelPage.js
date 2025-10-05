@@ -1,5 +1,5 @@
-const slides = document.querySelector('.channel_review_content');
-const slideItems = document.querySelectorAll('.channel_review_content_box');
+const slides = document.querySelector('.channel-review__wrapper');
+const slideItems = document.querySelectorAll('.video-card__wrapper');
 const prevBtn = document.querySelector('#left');
 const nextBtn = document.querySelector('#right');
 

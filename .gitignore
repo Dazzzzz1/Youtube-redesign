@@ -5,6 +5,7 @@
 /.parcel-cache
 /.pnp
 .pnp.js
+/.idea
 
 # testing
 /coverage

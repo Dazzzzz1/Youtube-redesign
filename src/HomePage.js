@@ -44,28 +44,15 @@ function initSlider(contentSelector, itemSelector, leftBtnSelector, rightBtnSele
     });
 }
 
-initSlider('.channel_review > .channel_review_content', ' .channel_review_content_box', '#left', '#right');
-initSlider('.recommended_content_boxes', '.recommended_content_box', '#left2', '#right2');
-initSlider('.rec_channel > .channel_review_content', '.channel_review_content_box', '#left3', '#right3');
+initSlider('.channel-review > .channel-review__wrapper', ' .video-card__wrapper', '#left', '#right');
+initSlider('.recommended__wrapper', '.recommended__content', '#left2', '#right2');
+initSlider('.rec-channel > .channel-review__wrapper', '.video-card__wrapper', '#left3', '#right3');
 
-const vid_boxes = document.querySelectorAll(".channel_review_content_box")
-const video_boxes = document.querySelectorAll('.recommended_content_box');
-
-
-video_boxes.forEach(box  => {
-   const video = box.querySelector('.recommended_content_video');
-
-    box.addEventListener('mouseenter', () => {
-        video.play()
-    });
-    box.addEventListener('mouseleave', () => {
-        video.pause();
-        video.currentTime = 0;
-    });
-});
+const vid_boxes = document.querySelectorAll(".video-card__wrapper")
+const video_boxes = document.querySelectorAll('.recommended__content');
 
 vid_boxes.forEach(box  => {
-   const video = box.querySelector('.channel_review_content_video');
+    const video = box.querySelector('.video');
 
     box.addEventListener('mouseenter', () => {
         video.play()
@@ -75,6 +62,19 @@ vid_boxes.forEach(box  => {
         video.currentTime = 0;
     });
 });
+
+video_boxes.forEach(box  => {
+   const video = box.querySelector('.recommended__video');
+
+    box.addEventListener('mouseenter', () => {
+        video.play()
+    });
+    box.addEventListener('mouseleave', () => {
+        video.pause();
+        video.currentTime = 0;
+    });
+});
+
 
 // const burger = document.querySelector('.header_start_burger');
 // const sidenavBurger = document.querySelector('.side_nav_burger');

@@ -2,7 +2,7 @@ import {videos} from './storage.json';
 
 function playVideo(elem) {
     const video = elem.querySelector('.player');
-    const img = elem.querySelector('.vids_result_img');
+    const img = elem.querySelector('.vids-result__img');
     
     img.style.opacity = '0';
     video.style.opacity = '1';
@@ -11,7 +11,7 @@ function playVideo(elem) {
 
 function stopVideo(elem) {
     const video = elem.querySelector('.player');
-    const img = elem.querySelector('.vids_result_img');
+    const img = elem.querySelector('.vids-result__img');
    
     video.pause();
     img.style.opacity = '1';
@@ -32,33 +32,32 @@ function searchVideos(inputText) {
   });
 }
 
-
 function showResults(results) {
 
     const feed = document.querySelector('.feed');
-    const singleChannel = document.querySelector('.single_channel');
+    const singleChannel = document.querySelector('.single-channel');
   
     const searchResults = document.createElement('div');
-    searchResults.className = 'search_results';
+    searchResults.className = 'search-results';
   
   if (results.length === 0) {
-    searchResults.innerHTML = '<div class="result_notF">Nothing was found:(</div>';
+    searchResults.innerHTML = '<div class="result--notfound">Nothing was found:(</div>';
   } else {
     searchResults.innerHTML = results.map(video => `
-      <div class="vids_result">
-        <div class="vids_result_box">
-            <img class="vids_result_img" src="${video.image}" alt="${video.title}">
+      <div class="vids-result">
+        <div class="vids-result__wrapper">
+            <img class="vids-result__img" src="${video.image}" alt="${video.title}">
             <video class="player" muted loop preload="none">
                 <source src="${video.url}" type="video/mp4">
             </video>
         </div>
-        <h2 class="vids_result_h">${video.title}</h2>
-        <div class="vids_result_descr">
-            <div class="vids_result_descr_box">
-                <div class="vids_result_descr_owner"> ${video.owner}</div>
-                <div class="vids_result_descr_views"> ${video.views} </div>
+        <h2 class="vids-result__h">${video.title}</h2>
+        <div class="vids-result__descr">
+            <div class="vids-result__descr__wrapper">
+                <div class="vids-result__descr__owner"> ${video.owner}</div>
+                <div class="vids-result__descr__views"> ${video.views} </div>
             </div>
-            <div class="vids_result_descr_time"> ${video.time}</div>
+            <div class="vids-result__descr__time"> ${video.time}</div>
         </div>
       </div>
     `).join('');;
@@ -67,29 +66,29 @@ function showResults(results) {
   if (document.querySelector('.feed')){
     feed.innerHTML = '';
     feed.appendChild(searchResults);
-  } else if (document.querySelector('.single_channel')){
+  } else if (document.querySelector('.single-channel')){
         singleChannel.innerHTML = '';
         singleChannel.appendChild(searchResults);
   }
   
     searchResults.addEventListener('mouseover', (e) => {
-        const vidsResult = e.target.closest('.vids_result');
+        const vidsResult = e.target.closest('.vids-result');
         if (vidsResult) {
             playVideo(vidsResult);
         }
     });
 
     searchResults.addEventListener('mouseout', (e) => {
-        const vidsResult = e.target.closest('.vids_result');
+        const vidsResult = e.target.closest('.vids-result');
         if (vidsResult) {
             stopVideo(vidsResult);
         }
     });
 }
 
-const searchBtn = document.querySelector('.header_search_btn');
-const searchInput = document.querySelector('.header_search_input');
-const search = document.querySelector('.header_search');
+const searchBtn = document.querySelector('.search__btn');
+const searchInput = document.querySelector('.search__input');
+const search = document.querySelector('.header__search');
 
 searchBtn.addEventListener('click', () => {
     const searchText = searchInput.value;
