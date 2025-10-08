@@ -60,20 +60,6 @@ video_boxes.forEach((box)=>{
         video.pause();
         video.currentTime = 0;
     });
-}); // const burger = document.querySelector('.header_start_burger');
- // const sidenavBurger = document.querySelector('.side_nav_burger');
- // let body = document.body;
- // burger.addEventListener('click', () => {
- //     sidenavBurger.classList.toggle('active');  
- // });
- // document.addEventListener('click', (e) => {
- //     if ( 
- //         !e.target.closest('.header_start_burger') 
- //         &&
- //         !e.target.closest('.side_nav_burger')
- //      ){
- //         sidenavBurger.style.display = 'none';
- //     }
- // });
+});
 
 //# sourceMappingURL=Youtube-redesign.166caac5.js.map

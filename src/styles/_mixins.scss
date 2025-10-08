@@ -9,15 +9,15 @@
     background-color: var(--bg);
     justify-content: center;
     align-items: center;
-    gap: 12vw;
+    gap: 13%;
     width: 100%;
-    height: 61px;
+    height: 3.8rem;
     border-top: 1px solid var(--border);
     .menu-media__btn{
       @include textMediaMenu;
       @include flexCol;
       align-items: center;
-      gap: 5px;
+      gap: 0.4rem;
       .sidebar__btn__img{
         color: var(--menuMedia);
         opacity: 0.6;
@@ -25,39 +25,155 @@
     }
   }
 }
+@mixin slider-animation{
+  @keyframes sidebarActive{
+    from{
+      transform: translateX(-100%);
+    }
+    to {
+      transform: translateX(15%);
+    }
+  }
+  @keyframes sidebarClosed{
+    from{
+      transform: translateX(15%);
+    }
+    to {
+      transform: translateX(-100%);
+    }
+  }
+  @media (max-width: 622px){
+    @keyframes sidebarActive{
+      from{
+        transform: translateX(-100%);
+      }
+      to {
+        transform: translateX(0%);
+      }
+    }
+    @keyframes sidebarClosed{
+      from{
+        transform: translateX(0%);
+      }
+      to {
+        transform: translateX(-100%);
+      }
+    }
+  }
+}
+@mixin side-bar{
+  @include flexCol;
+  gap: 4rem;
+  padding-top: 2rem;
+  background-color: var(--bg);
+}
+@mixin theme-toggler{
+  display: flex;
+  flex-direction: column;
+  gap: 1.6rem;
+  .theme-toggler__wrapper{
+    @media(max-width: 1600px){
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .theme-toggler{
+      position: relative;
+      width: 4rem;
+      height: 2rem;
+      background: rgba(216, 215, 215, 0.5);
+      display: flex;
+      align-items: center;
+      border-radius: 20px;
+      border: 2px solid red;
+      .theme__icon{
+        display: flex;
+        margin-left: 0.3125rem;
+        gap: 1rem;
+      }
+    }
+    .theme-toggler .fill {
+      position: absolute;
+      right: 0.19rem;
+      top: 0.125rem;
+      border-radius: 20px;
+      border: 1px solid red;
+      width: 1.6rem;
+      height: 1.6rem;
+      transition: 0.4s right;
+      background-color: red;
+    }
+    .theme-toggler input {
+      visibility: hidden;
+    }
+    .theme-toggler input:checked + span.fill {
+      right: calc(100% - 1.9rem);
+    }
+  }
+}
+@mixin vids-result{
+  .vids-result__wrapper{
+    position: relative;
+    width: 100%;
+    height: 10rem;
+    overflow: hidden;
+    border-radius: 8px;
+    .vids-result__img{
+      width: 20rem;
+      height: 10rem;
+    }
+    .player{
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      transition: opacity 0.3s ease;
+    }
+  }
+  .vids-result__h{
+    @include textMainBold;
+    padding-top: 1.6rem;
+  }
+  .vids-result__descr{
+    .vids-result__descr__wrapper{
+      display: flex;
+      gap: 1.6rem;
+    }
+    @include detailsBox;
+    justify-content: space-between;
+  }
+}
 @mixin channel-wrapper{
   display: flex;
-  gap: 40px;
-  max-width: 3000px;
+  gap: 2.5rem;
   transition: transform 0.3s ease;
-  @media (width < 2300px){
-    width: 99vw;
-  }
-  @media (width < 620px){
+  @media (max-width: 620px){
     flex-direction: column;
-    width: clamp(320px, 30vw, 3000px);
-    gap: 90px;
+    width: 20rem;
+    gap: 5.6rem;
   }
   .video-card__wrapper{
-    width: 250px;
-    @media (width < 620px){
+    width: 15.6rem;
+    @media (max-width: 620px){
       width: 100%;
-      height: 170px;
+      height: 10.6rem;
     }
     .video{
-      height: 150px;
-      width: 250px;
+      height: 9rem;
+      width: 16rem;
       border-radius: 25px;
       object-fit: cover;
       border: 2px solid var(--border);
-      @media (width < 620px){
+      @media (max-width: 620px){
         width: 100%;
         height: 100%;
       }
     }
     .video-card__name{
       @include textMainBold;
-      padding-top:10px;
+      padding-top: 1rem;
     }
     .video-card__details{
       @include detailsBox;
@@ -65,77 +181,100 @@
     }
   }
 }
+@mixin slider-arrow{
+  color: var(--icon);
+  margin-right: 0.4375rem;
+}
+@mixin search-results{
+  display: flex;
+  gap: 1.8rem;
+  width: 100%;
+  max-width: 2560px;
+  flex-wrap: wrap;
+  @media(max-width: 760px){
+    justify-content: center;
+  }
+}
+@mixin dimmed{
+  display: none;
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  backdrop-filter: blur(2px);
+  z-index: 10;
+  background-color: var(--bg_blurred);
+}
 @mixin textBoldH{
     color: var(--grey);
     font-family: Mulish;
-    font-size: 26px;
+    font-size: 1.6rem;
     font-weight: 700;
 }
 @mixin textBoldT{
     color: var(--grey);
     font-family: Mulish;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 @mixin textBold{
     color: var(--icon);
     font-family: Mulish;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 @mixin textCateg{
     color: var(--icon);;
     font-family: Mulish;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 400;
 }
 @mixin textMediaMenu{
     color: var(--menuMedia);
     font-family: Mulish;
-    font-size: 10px; 
+    font-size: 0.625rem;
 }
 @mixin textCategHover{
     color: red;
     font-family: Mulish;
-    font-size: 18px;
+    font-size: 1.125rem;
     font-weight: 700;
 }
 @mixin textMain{
     color: var(--dark_grey);
     font-family: Mulish;
-    font-size: 16px;   
+    font-size: 1rem;
 }
 @mixin textMainSub{
     color: white;
     font-family: Mulish;
-    font-size: 16px;   
+    font-size: 1rem;
 }
 @mixin textMainBold{
     color: var(--grey);
     font-family: Mulish;
-    font-size: 16px; 
-    font-weight: 700;
+    font-size: 1rem;
+  font-weight: 700;
 }
 @mixin textSubMain2{
     color: var(--light_grey);
     font-family: Mulish;
-    font-size: 16px;  
+    font-size: 1rem;
 }
 @mixin textDesc{
     color: var(--icon);
     font-family: Mulish;
-    font-size: 16px; 
+    font-size: 1rem;
     opacity: 0.5;
 }
 @mixin textSubMain{
    color: var(--light_grey);
     font-family: Mulish;
-    font-size: 13px;  
+    font-size: 0.8125rem;
 }
 @mixin textSmall{
     color:white;
     font-family: Mulish;
-    font-size: 12px; 
+    font-size: 0.75rem;
     font-weight: 700;
 }
 @mixin alignCenter{
@@ -149,7 +288,7 @@
 @mixin detailsBox{
     display: flex; 
     @include textSubMain; 
-    padding-top:4px;
+    padding-top: 0.25rem;
 }
 @mixin clearButton{
     border: none;

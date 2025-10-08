@@ -65,6 +65,7 @@
             </button>
         </div>
     </header>
+    <div class="wrapper__dimmed"></div>
     <main>
         <div class="main-wrapper">
             <nav class="sidebar">
@@ -88,7 +89,52 @@
                         <div class="sidebar__btn__text">Subscriptions</div>
                     </button>
                 </div>
-
+                <div class="sidebar__sett__wrapper">
+                    <div class="sidebar__sett">
+                        <button type="button" class="sidebar__btn" aria-label="Opening settings">
+                            <svg class="sidebar__btn__img" xmlns="http://www.w3.org/2000/svg" width="19" height="20" fill="currentColor">
+                                <path fill-rule="evenodd" d="m13.468 3.73-.742-.434s-.776-2.11-.842-2.254C11.637.447 10.961 0 10.284 0H8.42c-.675 0-1.349.446-1.613 1.068-.054.118-.821 2.228-.821 2.228l-.734.436s-2.236-.39-2.392-.404c-.64-.084-1.365.279-1.704.866l-.93 1.612a1.813 1.813 0 0 0 .118 1.931c.074.106 1.519 1.835 1.519 1.835s-.012.285-.012.428c0 .303.01.429.01.429S.42 12.157.328 12.285c-.392.512-.44 1.322-.102 1.909l.931 1.612c.338.585 1.06.945 1.731.863.13-.012 2.343-.402 2.343-.402l.745.425s.778 2.122.843 2.265c.247.596.924 1.043 1.602 1.043h1.862c.675 0 1.348-.446 1.613-1.068.054-.117.83-2.232.83-2.232l.73-.431 2.38.402c.646.085 1.372-.278 1.71-.865l.932-1.612a1.813 1.813 0 0 0-.119-1.931c-.074-.106-1.52-1.826-1.52-1.826s.013-.291.013-.437c0-.303-.01-.43-.01-.43s1.443-1.727 1.534-1.855c.392-.512.44-1.322.102-1.909l-.931-1.612a1.813 1.813 0 0 0-1.732-.863c-.129.012-2.347.399-2.347.399Zm-2.526.575.135.45.431.183c.408.174.793.397 1.147.664l.375.282.457-.108c.664-.158 2.225-.42 2.374-.438.087-.01.835 1.286.783 1.356-.09.12-1.097 1.34-1.566 1.837l-.321.34.055.466a5.579 5.579 0 0 1 0 1.327l-.055.465.321.34c.469.496 1.475 1.717 1.566 1.838.052.07-.731 1.361-.783 1.355-.15-.019-1.71-.28-2.374-.438l-.457-.108-.375.282c-.354.267-.74.49-1.147.664l-.431.184-.135.449c-.195.653-.749 2.135-.808 2.273-.034.08-1.53.08-1.565 0-.059-.138-.612-1.62-.807-2.273l-.135-.45-.431-.183a5.494 5.494 0 0 1-1.147-.664l-.375-.282-.457.109c-.664.157-2.225.418-2.375.437-.086.01-.835-1.286-.782-1.356.09-.12 1.097-1.34 1.566-1.837l.321-.34-.056-.465a5.569 5.569 0 0 1 0-1.328l.056-.465-.321-.34C3.157 8.035 2.15 6.814 2.06 6.693c-.053-.07.696-1.365.782-1.355.15.018 1.71.28 2.375.438l.457.108.375-.282c.354-.267.74-.49 1.147-.664l.431-.184.135-.449c.195-.653.749-2.135.807-2.273.035-.08 1.531-.08 1.565 0 .06.138.613 1.62.808 2.273ZM9.352 13a3 3 0 1 1 0-6 3 3 0 0 1 0 6Zm1-3a1 1 0 1 1-2 0 1 1 0 0 1 2 0Z" clip-rule="evenodd" opacity=".24"></path>
+                            </svg>
+                            <div class="sidebar__btn__text">Settings</div>
+                        </button>
+                    </div>
+                    <div class="theme-toggler__wrapper">
+                        <label class="theme-toggler">
+                            <div class="theme__icon">
+                                <svg class="icon__moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                    <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"></path>
+                                </svg>
+                                <svg class="icon__sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                    <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
+                                </svg>
+                            </div>
+                            <input class="toggler" type="checkbox">
+                            <span class="fill"></span>
+                        </label>
+                    </div>
+                </div>
+            </nav>
+            <nav class="sidebar__active">
+                <div class="sidebar__main">
+                    <button type="button" class="sidebar__btn" aria-label="Opening sidebar tool">
+                        <svg class="sidebar__btn__img" width="20" height="19" viewBox="0 0 20 19" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" d="M1.552 10.592a.912.912 0 0 1-1.286 0 .902.902 0 0 1 0-1.28L9.357.266a.912.912 0 0 1 1.286 0l9.09 9.048a.902.902 0 0 1 0 1.28.912.912 0 0 1-1.285 0l-.266-.266v6.868A1.81 1.81 0 0 1 16.362 19H3.638a1.812 1.812 0 0 1-1.819-1.805v-6.868l-.266.265Zm2.085 6.598 2.727.001V11.76c0-.499.406-.903.906-.903h5.46c.5 0 .906.404.906.903v5.433l2.728.002V8.519L10 2.192 3.636 8.519l.001 8.671Zm8.181-4.525v4.527H8.182v-4.525l3.636-.002Z" clip-rule="evenodd"></path>
+                        </svg>
+                        <div class="sidebar__btn__text">Home</div>
+                    </button>
+                    <button type="button" class="sidebar__btn" aria-label="Opening sidebar tool">
+                        <svg class="sidebar__btn__img" xmlns="http~://www.w3.org/2000/svg" width="16" height="21" fill="currentColor">
+                            <path fill-rule="evenodd" d="M13.615 7.2C15.132 8.51 16 10.117 16 12.321c0 4.59-3.587 8.206-7.989 8.206C3.606 20.527 0 16.909 0 12.32c0-2.527.548-4.089 2.155-6.684.509-.822 1.744-.523 1.84.445.085.87.35 1.61.734 2.177C4.472 5.193 5.804 1.744 9.086.106c.76-.38 1.608.319 1.41 1.16-.512 2.183.016 3.356 1.396 4.621.034.031.206.158.433.326.412.304 1.006.742 1.29.987ZM2.621 9.007C2.339 9.663 2 10.453 2 12.321c0 3.447 2.701 6.157 6.011 6.157 3.305 0 5.989-2.705 5.989-6.157 0-1.54-.575-2.605-1.674-3.554-.174-.15-.58-.452-.963-.737-.362-.27-.702-.522-.804-.616C9.234 6.2 8.424 4.907 8.314 3.184c-.67.668-2.21 2.748-1.342 6.864.134.639-.34 1.241-.977 1.241-1.265 0-2.515-.99-3.279-2.507-.03.074-.062.149-.095.225Z" clip-rule="evenodd" opacity=".24"></path>
+                        </svg>
+                        <div class="sidebar__btn__text">Trending</div>
+                    </button>
+                    <button type="button" class="sidebar__btn" aria-label="Opening sidebar tool">
+                        <svg class="sidebar__btn__img" xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor">
+                            <path fill-rule="evenodd" d="M3.906 1A1 1 0 0 1 4.9 0h8.01a1 1 0 0 1 0 2H4.9a.995.995 0 0 1-.995-1ZM.01 8.095l.801 8.01A2.123 2.123 0 0 0 2.901 18H14.91A2.129 2.129 0 0 0 17 16.104l.801-8.01A1.885 1.885 0 0 0 15.905 6H1.906C.76 6-.104 6.956.01 8.095Zm2.001-.09 13.789.003L14.906 16h-12L2.01 8.004ZM2.901 3a1 1 0 0 0 0 2H14.91a1 1 0 0 0 0-2H2.901Z" clip-rule="evenodd" opacity=".24"></path>
+                        </svg>
+                        <div class="sidebar__btn__text">Subscriptions</div>
+                    </button>
+                </div>
                 <div class="sidebar__categ">
                     <button type="button" class="sidebar__btn" aria-label="Opening sidebar tool">
                         <svg class="sidebar__btn__img" xmlns="http://www.w3.org/2000/svg" width="20" height="16" fill="currentColor">
@@ -132,40 +178,41 @@
                         </svg>
                         <div class="sidebar__btn__text">Games</div>
                     </button>
-                    <button type="button" class="sidebar__btn" aria-label="Opening sidebar tool">
+                    <button type="button" class="sidebar__btn" aria-label="Show more">
                         <svg class="sidebar__btn__img" xmlns="http://www.w3.org/2000/svg" width="14" height="8" fill="currentColor">
                             <path d="m6.67 5.255 4.95-4.95a1 1 0 1 1 1.413 1.414L7.376 7.376a1 1 0 0 1-1.414 0L.305 1.72A1 1 0 1 1 1.72.305l4.95 4.95Z" opacity=".24"></path>
                         </svg>
                         <div class="sidebar__btn__text">Show more</div>
                     </button>
                 </div>
-
                 <div class="sidebar__subs">
                     <div class="sidebar__subs__head">Subscriptions</div>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval.9be3ec7b.png" alt="avatar">
-                        <div class="sidebar__profile__name">Gussie Singleton</div>
-                    </button>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval-2.ce6c8416.png" alt="avatar">
-                        <div class="sidebar__profile__name">Nora Francis</div>
-                    </button>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval-3.a93248b6.png" alt="avatar">
-                        <div class="sidebar__profile__name">Belle Briggs</div>
-                    </button>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval-4.47631267.png" alt="avatar">
-                        <div class="sidebar__profile__name">Eunice Cortez</div>
-                    </button>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval-5.d76828ad.png" alt="avatar">
-                        <div class="sidebar__profile__name">Emma Hanson</div>
-                    </button>
-                    <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
-                        <img class="sidebar__profile__img" src="/Oval%20copy.44dbb23e.png" alt="avatar">
-                        <div class="sidebar__profile__name">Leah Berry</div>
-                    </button>
+                    <div class="sidebar__subs__wrapper">
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval.9be3ec7b.png" alt="avatar">
+                            <div class="sidebar__profile__name">Gussie Singleton</div>
+                        </button>
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval-2.ce6c8416.png" alt="avatar">
+                            <div class="sidebar__profile__name">Nora Francis</div>
+                        </button>
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval-3.a93248b6.png" alt="avatar">
+                            <div class="sidebar__profile__name">Belle Briggs</div>
+                        </button>
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval-4.47631267.png" alt="avatar">
+                            <div class="sidebar__profile__name">Eunice Cortez</div>
+                        </button>
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval-5.d76828ad.png" alt="avatar">
+                            <div class="sidebar__profile__name">Emma Hanson</div>
+                        </button>
+                        <button type="button" class="sidebar__btn__profile" aria-label="Opening subscriptions">
+                            <img class="sidebar__profile__img" src="/Oval%20copy.44dbb23e.png" alt="avatar">
+                            <div class="sidebar__profile__name">Leah Berry</div>
+                        </button>
+                    </div>
                 </div>
                 <div class="sidebar__sett__wrapper">
                     <div class="sidebar__sett">
@@ -179,10 +226,10 @@
                     <div class="theme-toggler__wrapper">
                         <label class="theme-toggler">
                             <div class="theme__icon">
-                                <svg class="icon__moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                <svg class="icon__moon" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="white">
                                     <path d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278M4.858 1.311A7.27 7.27 0 0 0 1.025 7.71c0 4.02 3.279 7.276 7.319 7.276a7.32 7.32 0 0 0 5.205-2.162q-.506.063-1.029.063c-4.61 0-8.343-3.714-8.343-8.29 0-1.167.242-2.278.681-3.286"></path>
                                 </svg>
-                                <svg class="icon__sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor">
+                                <svg class="icon__sun" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="black">
                                     <path d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708"></path>
                                 </svg>
                             </div>
@@ -194,7 +241,7 @@
             </nav>
             <section class="single-channel">
 
-                <img class="single-channel__banner" src="/Cover-4.e1653d3c.png" alt="banner">
+                <div class="single-channel__banner__wrapper"><img class="single-channel__banner" src="/Cover-4.e1653d3c.png" alt="banner"></div>
 
                 <section class="single-channel__descr__wrapper">
                     <div class="single-channel__descr">
@@ -238,7 +285,7 @@
                             <div class="single-channel__menu__end">
                                 <img class="single-channel__menu__video" src="/Cover-5.2d5c5db0.png">
                                 <div class="single-channel__menu__video__wrapper">
-                                    <h2 class="single_channel_categ_menu_end_video_title">Choosing The Best Audio Player Software For Your Computer</h2>
+                                    <h2 class="single-channel__menu__video__title">Choosing The Best Audio Player Software For Your Computer</h2>
                                     <p class="single-channel__menu__video__desc">Your cheap internet-based banner advertising will become one of the sought for ads there are. Today, the world of Internet advertising is rapidly evolving beyond banner ads and intrusive pop-ups. Bayles A common medium for advertising on the Internet is the use of banner ads. </p>
                                     <div class="single-channel__menu__video__num"> 11k views  ·  6 months ago</div>
                                 </div>
@@ -404,6 +451,7 @@
     </main>
         <script defer="" src="/channelPage.516776b1.js"></script>
         <script defer="" src="/Youtube-redesign.69dc9d46.js"></script>
+        <script defer="" src="/Youtube-redesign.f0cb0847.js"></script>
         <script type="module" defer="" src="/Youtube-redesign.67d724f2.js"></script>
 
 </body></html>

@@ -160,11 +160,11 @@
       });
     }
   }
-})({"g2e6q":[function(require,module,exports,__globalThis) {
+})({"2M4tV":[function(require,module,exports,__globalThis) {
 var global = arguments[3];
 var HMR_HOST = null;
 var HMR_PORT = null;
-var HMR_SERVER_PORT = 62489;
+var HMR_SERVER_PORT = 61859;
 var HMR_SECURE = false;
 var HMR_ENV_HASH = "439701173a9199ea";
 var HMR_USE_SSE = false;
@@ -754,6 +754,6 @@ searchInput.addEventListener('keypress', (e)=>{
 },{"./storage.json":"tGnnp"}],"tGnnp":[function(require,module,exports,__globalThis) {
 module.exports = JSON.parse("{\"videos\":[{\"id\":1,\"title\":\"A Brief History Of Creation\",\"description\":\"Learn about the origins of the universe and life on Earth\",\"views\":\"80k\",\"time\":\"3 days ago\",\"owner\":\"Dollie Blair\",\"image\":\"https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80\",\"url\":\"video.mp4\"},{\"id\":2,\"title\":\"Dude You Re Getting A Telescope\",\"description\":\"Complete guide to choosing and using telescopes for beginners\",\"views\":\"34k\",\"time\":\"5 months ago\",\"owner\":\"Gussie French\",\"image\":\"https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80\"},{\"id\":3,\"title\":\"Astronomy Or Astrology\",\"description\":\"Understanding the difference between science and pseudoscience\",\"views\":\"240k\",\"time\":\"4 months ago\",\"owner\":\"Food & Drink\",\"image\":\"https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80\"},{\"id\":4,\"title\":\"Python Programming Basics\",\"description\":\"Learn Python from scratch with practical examples\",\"views\":\"156k\",\"time\":\"2 weeks ago\",\"owner\":\"Tech Master\",\"image\":\"https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80\"},{\"id\":5,\"title\":\"Cooking Italian Pasta\",\"description\":\"Authentic Italian pasta recipes from Naples\",\"views\":\"89k\",\"time\":\"1 month ago\",\"owner\":\"Chef Marco\",\"image\":\"https://images.unsplash.com/photo-1464823063530-08f10ed1a2dd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80\"}]}");
 
-},{}]},["g2e6q","gTHBT"], "gTHBT", "parcelRequireef1a", {})
+},{}]},["2M4tV","gTHBT"], "gTHBT", "parcelRequireef1a", {})
 
 //# sourceMappingURL=Youtube-redesign.67d724f2.js.map
